@@ -22,18 +22,18 @@ This repository was created as an assignment for InBotiq. It is primarily writte
 
 ## Tech stack
 ## Backend
-Node.js with Express
-TypeScript
-PostgreSQL with Prisma ORM
-JWT for authentication
-bcrypt for password hashing
-CORS enabled
+- Node.js with Express
+- TypeScript
+- PostgreSQL with Prisma ORM
+- JWT for authentication
+- bcrypt for password hashing
+- CORS enabled
 ## Frontend
-Next.js 16 with App Router
-TypeScript
-TailwindCSS for styling
-React hooks for state management
-Language composition (approximate):
+- Next.js 16 with App Router
+- TypeScript
+- TailwindCSS for styling
+- React hooks for state management
+- Language composition (approximate):
 - TypeScript: 95.5%
 - CSS: 2.9%
 - JavaScript: 1.6%
