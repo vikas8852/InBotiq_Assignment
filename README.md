@@ -1,6 +1,6 @@
 # InBotiq_Assignment
 
-A TypeScript-based code assignment for InBotiq. This repository contains a TypeScript project with supporting CSS and JavaScript files. The README below provides instructions to get the project running locally, describes the project's structure, and lists common commands to develop, test, and deploy the application.
+A full-stack web application featuring secure role-based authentication, allowing Users and Admins to sign up, log in, and access customized dashboards tailored to their roles.
 
 ## Table of Contents
 - [Project overview](#project-overview)
@@ -10,7 +10,6 @@ A TypeScript-based code assignment for InBotiq. This repository contains a TypeS
 - [Getting started](#getting-started)
 - [Available scripts](#available-scripts)
 - [Environment variables](#environment-variables)
-- [Testing](#testing)
 - [Linting & formatting](#linting--formatting)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
@@ -22,26 +21,23 @@ A TypeScript-based code assignment for InBotiq. This repository contains a TypeS
 This repository was created as an assignment for InBotiq. It is primarily written in TypeScript (~95% of code) with small amounts of CSS and JavaScript. Replace or expand the sections below with project-specific details (purpose, features, architecture) as needed.
 
 ## Tech stack
-- TypeScript
-- Node.js
-- CSS
-- (Optional) Frameworks may be used depending on the project: React, Next.js, Vite, Express, NestJS, etc.
-
+## Backend
+Node.js with Express
+TypeScript
+PostgreSQL with Prisma ORM
+JWT for authentication
+bcrypt for password hashing
+CORS enabled
+## Frontend
+Next.js 16 with App Router
+TypeScript
+TailwindCSS for styling
+React hooks for state management
 Language composition (approximate):
 - TypeScript: 95.5%
 - CSS: 2.9%
 - JavaScript: 1.6%
 
-## Repository structure
-A typical project layout (adjust paths to match this repo):
-
-- src/                # TypeScript source files
-- public/             # Static assets
-- styles/ or css/     # CSS files
-- tests/              # Unit / integration tests
-- package.json
-- tsconfig.json
-- .eslintrc, .prettierrc
 
 ## Prerequisites
 - Node.js (recommend v16 or later)
@@ -86,33 +82,57 @@ Adjust these to match the scripts in package.json. Common scripts:
 To see exact scripts available, open package.json.
 
 ## Environment variables
-If the project uses environment variables, create a .env file in the project root and add keys there. Example:
+ the project uses environment variables, create a .env file in the project root and add keys there. Example:
 
 REACT_APP_API_URL=https://api.example.com
 PORT=3000
 
 Do not commit secrets or credentials. Add .env to .gitignore.
-
-## Testing
-If tests are included, run them with:
-
-npm test
-
-Add or update tests in the tests/ or __tests__/ directory. Use Jest, Vitest, or your preferred test runner.
-
-## Linting & formatting
-Use ESLint and Prettier (if configured):
-
 npm run lint
 npm run format
 
 Follow the repository's coding style and TypeScript configuration.
 
 ## Deployment
-Deployment steps vary by target platform. Common hosts:
-- Vercel / Netlify for front-end apps
-- Heroku / Railway / DigitalOcean for Node.js backends
-
+## Backend Deployment (Render/Railway)
+Render
+Create account at render.com
+Create new Web Service
+Connect your GitHub repository
+Configure:
+Build Command: cd backend && npm install && npm run build && npx prisma generate
+Start Command: cd backend && npm start
+Add environment variables from .env.example
+Deploy
+Railway
+Create account at railway.app
+Create new project from GitHub repo
+Configure:
+Root Directory: backend
+Build Command: npm install && npm run build && npx prisma generate
+Start Command: npm start
+Add environment variables
+Deploy
+## Frontend Deployment (Vercel/Netlify)
+Vercel (Recommended)
+Create account at vercel.com
+Import project from GitHub
+Configure:
+Framework Preset: Next.js
+Root Directory: frontend
+Add environment variable:
+NEXT_PUBLIC_API_URL: Your deployed backend URL
+Deploy
+Netlify
+Create account at netlify.com
+Import project from GitHub
+Configure:
+Base directory: frontend
+Build command: npm run build
+Publish directory: .next
+Add environment variable:
+NEXT_PUBLIC_API_URL: Your deployed backend URL
+Deploy
 Typical flow:
 1. Build the app: npm run build
 2. Deploy the contents of the build output folder or connect the GitHub repo to the hosting provider.
