@@ -2,6 +2,14 @@
 
 A full-stack web application featuring secure role-based authentication, allowing Users and Admins to sign up, log in, and access customized dashboards tailored to their roles.
 
+## 🌐 Live Preview
+
+The project is live and accessible here:  
+🔗 **[Visit Deployed App →](https://in-botiq-assignment.vercel.app/)**
+
+Experience the full-stack role-based authentication system in action.
+
+
 ## Table of Contents
 - [Project overview](#project-overview)
 - [Tech stack](#tech-stack)
@@ -82,14 +90,12 @@ Adjust these to match the scripts in package.json. Common scripts:
 To see exact scripts available, open package.json.
 
 ## Environment variables
- the project uses environment variables, create a .env file in the project root and add keys there. Example:
+ - the project uses environment variables, create a .env file in the project root and add keys there. Example:
 
-REACT_APP_API_URL=https://api.example.com
-PORT=3000
+- REACT_APP_API_URL=https://api.example.com
+- PORT=3000
 
-Do not commit secrets or credentials. Add .env to .gitignore.
-npm run lint
-npm run format
+- Do not commit secrets or credentials. Add .env to .gitignore.
 
 Follow the repository's coding style and TypeScript configuration.
 
