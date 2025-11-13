@@ -63,8 +63,47 @@ export default function Home() {
     </p>
   </div>
 </div>
+<div className="flex items-center justify-center p-6">
+  <div className="w-60 h-60 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-2xl border-4 border-yellow-500 flex flex-col items-center justify-center text-center transition-all duration-300 hover:scale-105">
+    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+      Role-Based Access
+    </h3>
+    <p className="text-gray-600 dark:text-gray-300">
+      Custom dashboards and secure routes built for both Users and Admins.
+    </p>
+  </div>
+</div>
+<div className="flex items-center justify-center p-6">
+  <div className="w-60 h-60 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-2xl border-4 border-green-500 flex flex-col items-center justify-center text-center transition-all duration-300 hover:scale-105">
+    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+      Scalable Architecture
+    </h3>
+    <p className="text-gray-600 dark:text-gray-300">
+      Designed with a flexible structure that grows with your application.
+    </p>
+  </div>
+</div>
+<div className="flex items-center justify-center p-6">
+  <div className="w-60 h-60 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-2xl border-4 border-cyan-500 flex flex-col items-center justify-center text-center transition-all duration-300 hover:scale-105">
+    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+      Modern UI
+    </h3>
+    <p className="text-gray-600 dark:text-gray-300">
+      Built with Next.js and Tailwind CSS for a clean, responsive experience.
+    </p>
+  </div>
+</div>
+
+
 
         </div>
+
+
+
+
+
+
+
       </main>
     </div>
   );
