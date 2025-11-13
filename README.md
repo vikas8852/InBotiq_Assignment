@@ -5,7 +5,7 @@ A full-stack web application featuring secure role-based authentication, allowin
 ## 🌐 Live Preview
 
 The project is live and accessible here:  
-🔗 **[Visit Deployed App →](https://in-botiq-assignment.vercel.app/)**
+🔗 **[Visit Deployed App →](https://in-botiq-assignment.vercel.app)**
 
 Experience the full-stack role-based authentication system in action.
 
