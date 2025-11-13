@@ -95,44 +95,44 @@ Follow the repository's coding style and TypeScript configuration.
 
 ## Deployment
 ## Backend Deployment (Render/Railway)
-Render
-Create account at render.com
-Create new Web Service
-Connect your GitHub repository
-Configure:
-Build Command: cd backend && npm install && npm run build && npx prisma generate
-Start Command: cd backend && npm start
-Add environment variables from .env.example
-Deploy
-Railway
-Create account at railway.app
-Create new project from GitHub repo
-Configure:
-Root Directory: backend
-Build Command: npm install && npm run build && npx prisma generate
-Start Command: npm start
-Add environment variables
-Deploy
-## Frontend Deployment (Vercel/Netlify)
-Vercel (Recommended)
-Create account at vercel.com
-Import project from GitHub
-Configure:
-Framework Preset: Next.js
-Root Directory: frontend
-Add environment variable:
-NEXT_PUBLIC_API_URL: Your deployed backend URL
-Deploy
-Netlify
-Create account at netlify.com
-Import project from GitHub
-Configure:
-Base directory: frontend
-Build command: npm run build
-Publish directory: .next
-Add environment variable:
-NEXT_PUBLIC_API_URL: Your deployed backend URL
-Deploy
+-Render
+-Create account at render.com
+-Create new Web Service
+-Connect your GitHub repository
+-Configure:
+-Build Command: cd backend && npm install && npm run build && npx prisma generate
+-Start Command: cd backend && npm start
+--Add environment variables from .env.example
+-Deploy
+-Railway
+-Create account at railway.app
+-Create new project from GitHub repo
+-Configure:
+-Root Directory: backend
+-Build Command: npm install && npm run build && npx prisma generate
+-Start Command: npm start
+-Add environment variables
+-Deploy
+-## Frontend Deployment (Vercel/Netlify)
+-Vercel (Recommended)
+-Create account at vercel.com
+-Import project from GitHub
+-Configure:
+-Framework Preset: Next.js
+-Root Directory: frontend
+-Add environment variable:
+-NEXT_PUBLIC_API_URL: Your deployed backend URL
+-Deploy
+-Netlify
+-Create account at netlify.com
+-Import project from GitHub
+-Configure:
+-Base directory: frontend
+-Build command: npm run build
+-Publish directory: .next
+-Add environment variable:
+-NEXT_PUBLIC_API_URL: Your deployed backend URL
+-Deploy
 Typical flow:
 1. Build the app: npm run build
 2. Deploy the contents of the build output folder or connect the GitHub repo to the hosting provider.
